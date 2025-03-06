@@ -1,2 +1,2 @@
-# Project 1: Real time
+# Project 2: Enabling of Realtime analysis of human physiological features
 ## TBD
