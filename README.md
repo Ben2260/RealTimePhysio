@@ -8,6 +8,6 @@
 >>
 >> This section will be filled out at a later date and after approval has been given.
 >>
-> #### $${\color{red}Project 2: \space Connecting \space Simulink \space and \space Matlab efficiently to LSL}$$ 
+> #### $${\color{White}Project 2: \space Connecting \space Simulink \space and \space Matlab \space efficiently \space to \space LSL}$$ 
 >> This process leverages the existing Lab Streaming Layer system and framework to establish a methodology for catching signals generated within a Simulink or Matlab environment. The basic structure provided uses a Python process as a middle man for processing the signal.
 
