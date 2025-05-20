@@ -38,10 +38,16 @@
 >> Still confused? Here are some resources for learning more about these concepts:
 >>
 >> [![Click Me](https://media.geeksforgeeks.org/gfg-gg-logo.svg)](https://www.geeksforgeeks.org/)  
-<table>
+<table style="border: 3px solid black; border-collapse: collapse;">
   <tr>
-    <td><img src="https://vectorseek.com/wp-content/uploads/2021/02/IBM-Logo-Vector.jpg" width="100"></td>
-    <td>IBM Logo</td>
+    <th style="border: 3px solid black;">Link</th>
+    <th style="border: 3px solid black;">Description</th>
+  </tr>
+  <tr>
+    <td style="border: 3px solid black;">
+      <img src="https://vectorseek.com/wp-content/uploads/2021/02/IBM-Logo-Vector.jpg" width="100">
+    </td>
+    <td style="border: 3px solid black;">IBM Logo</td>
   </tr>
 </table>
 
