@@ -66,7 +66,8 @@
     <li><strong>[T]:</strong> <u>Test File</u> – undergoing debugging and lacks comments.</li>
     <li><strong>[uE]:</strong> <u>User Example File</u> – aids users in creating new functions.</li>
     <li><strong>[V]:</strong> <u>Variable File</u> – contains old code used for reference.</li>
-    <li><strong>Example:</strong> A common file type you should familiarize yourself with are the feature extraction files. These serve as examples and existing implementations of current feature extraction methods that can either be built upon or used directly. The example we will be using below is the basic Respiration feature extraction method; since this method is complete, it is in stage [M].</li>
+    <br>
+    <li><strong>Example:</strong> A common file type you should familiarize yourself with are the feature extraction files. These serve as examples and existing implementations of current feature extraction methods that can either be built upon or used directly. The example we will be using below is the basic Respiration feature extraction method; since this method is complete, it is in stage [M] and is displayed bellow.</li>
     <div style="display: flex; justify-content: center;">
         <img src="https://github.com/Ben2260/RealTimePhysio/raw/main/Project%201%3A%20Real%20Time/Prefix%20name%20file%20Example.png" 
              alt="Prefix Name File Example" 
@@ -80,7 +81,8 @@
     <li><strong>[main]:</strong> <u>Leader</u> file – core file; meant to be executed directly.</li>
     <li><strong>[Com]:</strong> <u>Communication</u> file – handles data collection and routing.</li>
     <li><strong>[zOld]:</strong> <u>Original</u> file – deprecated but may be useful for development.</li>
-    <li><strong>Example:</strong> A common file type you should familiarize yourself with are the feature extraction files. These serve as examples and existing implementations of current feature extraction methods that can either be built upon or used directly. The example we will be using below is the basic Respiration feature extraction method; since this method is complete, it is in stage [M].</li>
+    <br>
+    <li><strong>Example:</strong> Basic Respiration feature extraction method; since this file is a feature exstraction method, it has core purpose [Feat] and is displayed bellow.</li>
     <div style="display: flex; justify-content: center;">
         <img src="https://github.com/Ben2260/RealTimePhysio/blob/main/Project%201%3A%20Real%20Time/Core%20name%20file%20Example.png" 
              alt="Prefix Name File Example" 
@@ -89,7 +91,8 @@
 </ul>
 <h5>3. General</h5>
 <p>The remaining portion of the filename describes the file itself, allowing multiple versions of similar files to exist.</p>
-        <li><strong>Example:</strong> A common file type you should familiarize yourself with are the feature extraction files. These serve as examples and existing implementations of current feature extraction methods that can either be built upon or used directly. The example we will be using below is the basic Respiration feature extraction method; since this method is complete, it is in stage [M].</li>
+        <br>
+        <li><strong>Example:</strong> Basic Respiration feature extraction method; Since this method is representative of a basic respiration feature exstraction methodology it is described as seen bellow.</li>
     <div style="display: flex; justify-content: center;">
         <img src="https://github.com/Ben2260/RealTimePhysio/blob/main/Project%201%3A%20Real%20Time/Generic%20name%20file%20Example.png" 
              alt="Prefix Name File Example" 
