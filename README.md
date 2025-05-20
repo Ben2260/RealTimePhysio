@@ -66,6 +66,8 @@
     <li><strong>[T]:</strong> <u>Test</u> file – undergoing debugging and lacks comments.</li>
     <li><strong>[uE]:</strong> <u>User Example</u> file – aids users in creating new functions.</li>
     <li><strong>[V]:</strong> <u>Variable</u> file – contains old code used for reference.</li>
+    <li>Example: </li>
+    <pre>conda activate RealTime</pre>
 </ul>
 <h5>2. Core Purpose</h5>
 <ul>
