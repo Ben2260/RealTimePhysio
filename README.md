@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real-Time Feature Analysis</title>
+    <title> Real-Time Feature Analysis</title>
         <style>
             body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
             h1, h2, h3, h4, h5 { color: #333; }
