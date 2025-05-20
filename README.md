@@ -45,7 +45,9 @@
   </tr>
   <tr>
     <td style="border: 3px solid black;">
-      <img src="https://vectorseek.com/wp-content/uploads/2021/02/IBM-Logo-Vector.jpg" width="100">
+      <a href="https://www.ibm.com/docs/en">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" width="100">
+      </a>
     </td>
     <td style="border: 3px solid black;">IBM Logo</td>
   </tr>
