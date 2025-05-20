@@ -1,20 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Real-Time Feature Analysis</title>
-        <style>
-            body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
-            h1, h2, h3, h4, h5 { color: #333; }
-            ul { list-style-type: none; padding-left: 20px; }
-            li { margin-bottom: 5px; }
-            blockquote { background: #f9f9f9; border-left: 10px solid #ccc; padding: 10px; margin: 10px 0; }
-            pre { background: #f4f4f4; padding: 10px; border-radius: 5px; font-family: monospace; }
-            a { color: #007BFF; text-decoration: none; }
-            u { text-decoration: underline; }
-        </style>
-</head>
 <body>
     <h1>Real-Time Feature Analysis</h1>
     <h2>Table of Contents</h2>
