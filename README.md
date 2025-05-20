@@ -45,7 +45,7 @@
     <ul>
         <li><strong>CPU:</strong> The brain of your computer, responsible for evaluating programs.</li>
         <li><strong>Multi-Processing:</strong> Running multiple calculations in parallel.</li>
-        <li><strong>Multi-Threading:</strong> TBD</li>
+        <li><strong>Multi-Threading:</strong> A technique that allows a CPU to execute multiple threads concurrently, improving efficiency and responsiveness.</li>
         <li><strong>CPU Up Time:</strong> Measures active computing time, should be optimized.</li>
         <li><strong>Memory Management:</strong> Allocating and optimizing memory resources.</li>
         <li><strong>Sliding Window:</strong> Processing smaller data segments sequentially.</li>
