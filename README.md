@@ -40,6 +40,62 @@
         </ul>
     </li>
 </ul>
+<h2>Overview</h2>
+
+<h4><u>Code Terminology:</u></h4>
+<ul>
+    <li><strong>CPU:</strong> The brain of your computer, responsible for evaluating programs and processes.</li>
+    <li><strong>Multi-Processing:</strong> A method that enables multiple mathematical operations to be performed simultaneously.</li>
+    <li><strong>Multi-Threading:</strong> TBD</li>
+    <li><strong>CPU Up Time:</strong> The percentage of time the CPU is actively computing within a given period.</li>
+    <li><strong>Memory Management:</strong> The process of allocating and optimizing memory resources efficiently.</li>
+    <li><strong>Memory Blocks:</strong> Temporary storage areas used to transfer data between locations or devices.</li>
+    <li><strong>Sliding Window:</strong> A technique for processing smaller segments of a dataset sequentially.</li>
+    <li><strong>Stride:</strong> The step size at which a sliding window moves across a dataset.</li>
+</ul>
+
+<p>Still confused? Here are some resources for learning more about these concepts:</p>
+<ul>
+    <li><a href="https://www.geeksforgeeks.org/"><img src="https://media.geeksforgeeks.org/gfg-gg-logo.svg" alt="GeeksforGeeks"></a></li>
+    <li><a href="https://www.ibm.com/docs/en"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Documentation"></a></li>
+</ul>
+
+<h4><u>Organizational Structure</u></h4>
+<p>The naming structure of my file system consists of three sections:</p>
+
+<h5>1. Stage</h5>
+<ul>
+    <li><strong>[M]:</strong> <u>Main</u> file – tested, debugged, and ready for use.</li>
+    <li><strong>[T]:</strong> <u>Test</u> file – undergoing debugging and lacks comments.</li>
+    <li><strong>[uE]:</strong> <u>User Example</u> file – aids users in creating new functions.</li>
+    <li><strong>[V]:</strong> <u>Variable</u> file – contains old code used for reference.</li>
+</ul>
+
+<h5>2. Core Purpose</h5>
+<ul>
+    <li><strong>[3rd]:</strong> <u>Third-Party</u> file – external or purchased library.</li>
+    <li><strong>[Feat]:</strong> <u>Feature</u> file – functional and available for user use.</li>
+    <li><strong>[main]:</strong> <u>Leader</u> file – core file; meant to be executed directly.</li>
+    <li><strong>[Com]:</strong> <u>Communication</u> file – handles data collection and routing.</li>
+    <li><strong>[zOld]:</strong> <u>Original</u> file – deprecated but may be useful for development.</li>
+</ul>
+
+<h5>3. General</h5>
+<p>The remaining portion of the filename describes the file itself, allowing multiple versions of similar files to exist.</p>
+
+<h4><u>Current State of the Program:</u></h4>
+<ul>
+    <li><strong>Description:</strong> TBD</li>
+    <li><strong>System Ability:</strong> TBD</li>
+    <li><strong>Available Features:</strong> TBD</li>
+</ul>
+
+<h4><u>General Recommendations:</u></h4>
+<p>To be filled out upon project completion.</p>
+
+<h3>Setting Up Real-Time</h3>
+
+<h4>Automatically: Anaconda Environment</h4>
 <h2 id="Overview">Download & Set Up</h2>
     <h3>Easy: Anaconda Environment</h3>
     <p><strong>Downloading and Setting Up Anaconda:</strong></p>
