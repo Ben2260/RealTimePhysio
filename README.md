@@ -14,7 +14,7 @@
     </li>
     <li><strong>2. Setting Up Real-Time</strong>
         <ul>
-            <li><a href="#Easy:_Anaconda_Environment">Easy: Anaconda Environment</a></li>
+            <li><a href="#Easy: Anaconda Environment">Easy: Anaconda Environment</a></li>
             <li><a href="#Third_Party_Links">Important links to 3rd party software</a></li>
         </ul>
     </li>
