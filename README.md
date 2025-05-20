@@ -1,61 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-    <h1>Real-Time Feature Analysis</h1>
-    <h2>Table of Contents</h2>
-    <ul>
-        <li><strong>1. Overview</strong>
-            <ul>
-                <li>Terminology</li>
-                <li>Organizational Structure</li>
-                <li>Current state of the program</li>
-                <li>General recommendations</li>
-            </ul>
-        </li>
-        <li><strong>2. Downloading Required Packages</strong>
-            <ul>
-                <li>Installing Multiprocessing, Pandas, NumPy, Time, Socket, Neurokit 2, Python 3.12</li>
-                <li>Important links to 3rd party software</li>
-            </ul>
-        </li>
-        <li><strong>3. Available Functionality</strong>
-            <ul>
-                <li><a href="#EDA">EDA</a></li>
-                <li>RSP</li>
-            </ul>
-        </li>
-        <li><strong>4. Examples</strong>
-            <ul>
-                <li>Running the Main</li>
-                <li>Using Device Emulator</li>
-                <li>Understanding TCP</li>
-                <li>Understanding Multiprocessing</li>
-            </ul>
-        </li>
-        <li><strong>5. Future Development</strong>
-            <ul>
-                <li>Design & Theory</li>
-                <li>GTL Lock & Limitations</li>
-                <li>Making New Functions</li>
-            </ul>
-        </li>
-    </ul>
-    <h2>Overview</h2>
-    <h4><u>Code Terminology:</u></h4>
-    <ul>
-        <li><strong>CPU:</strong> The brain of your computer, responsible for evaluating programs.</li>
-        <li><strong>Multi-Processing:</strong> Running multiple calculations in parallel.</li>
-        <li><strong>Multi-Threading:</strong> A technique that allows a CPU to execute multiple threads concurrently, improving efficiency and responsiveness.</li>
-        <li><strong>CPU Up Time:</strong> Measures active computing time, should be optimized.</li>
-        <li><strong>Memory Management:</strong> Allocating and optimizing memory resources.</li>
-        <li><strong>Sliding Window:</strong> Processing smaller data segments sequentially.</li>
-        <li><strong>Stride:</strong> Step size for sliding window movement.</li>
-    </ul>
-    <p><strong>Resources:</strong> 
-        <a href="https://www.geeksforgeeks.org/">GeeksforGeeks</a> | 
-        <a href="https://www.ibm.com/docs/en">IBM Documentation</a>
-    </p>
-    <h2>Setting Up Real-Time</h2>
+<h1>Real-Time Feature Analysis</h1>
+<h2>Table of Contents</h2>
+<ul>
+    <li><strong>1. Overview</strong>
+        <ul>
+            <li><a href="#Terminology">Terminology</a></li>
+            <li><a href="#Organizational_Structure">Organizational Structure</a></li>
+            <li><a href="#Current_State">Current state of the program</a></li>
+            <li><a href="#General_Recommendations">General recommendations</a></li>
+        </ul>
+    </li>
+    <li><strong>2. Downloading Required Packages</strong>
+        <ul>
+            <li><a href="#Installing_Packages">Installing Multiprocessing, Pandas, NumPy, Time, Socket, Neurokit 2, Python 3.12</a></li>
+            <li><a href="#Third_Party_Links">Important links to 3rd party software</a></li>
+        </ul>
+    </li>
+    <li><strong>3. Available Functionality</strong>
+        <ul>
+            <li><a href="#EDA">EDA</a></li>
+            <li><a href="#RSP">RSP</a></li>
+        </ul>
+    </li>
+    <li><strong>4. Examples</strong>
+        <ul>
+            <li><a href="#Running_Main">Running the Main</a></li>
+            <li><a href="#Device_Emulator">Using Device Emulator</a></li>
+            <li><a href="#Understanding_TCP">Understanding TCP</a></li>
+            <li><a href="#Multiprocessing">Understanding Multiprocessing</a></li>
+        </ul>
+    </li>
+    <li><strong>5. Future Development</strong>
+        <ul>
+            <li><a href="#Design_Theory">Design & Theory</a></li>
+            <li><a href="#GTL_Lock_Limitations">GTL Lock & Limitations</a></li>
+            <li><a href="#New_Functions">Making New Functions</a></li>
+        </ul>
+    </li>
+</ul>
+<h2 id="Overview">Overview</h2>
     <h3>Automatically: Anaconda Environment</h3>
     <p><strong>Downloading and Setting Up Anaconda:</strong></p>
     <ol>
