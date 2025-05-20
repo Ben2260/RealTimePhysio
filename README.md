@@ -41,7 +41,7 @@
     </li>
 </ul>
 <h2>Overview</h2>
-<h3><u>Code Terminology:</u></h3>
+<h3 id="Terminology"><u>Code Terminology:</u></h3>
 <ul>
     <li><strong>CPU:</strong> The brain of your computer, responsible for evaluating programs and processes.</li>
     <li><strong>Multi-Processing:</strong> A method that enables multiple mathematical operations to be performed simultaneously.</li>
