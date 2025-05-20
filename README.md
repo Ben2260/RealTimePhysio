@@ -54,7 +54,7 @@
     <li><strong>Stride:</strong> The step size at which a sliding window moves across a dataset.</li>
 </ul>
     
-<h3 id="#Organizational_Structure"><u>Organizational Structure:</u></h3>
+<h3 id="Organizational_Structure"><u>Organizational Structure:</u></h3>
     <p>The naming structure of my file system consists of three sections:</p>
     <h4>1. Prefix</h4>
     <ul>
@@ -94,13 +94,13 @@
                  style="width: 50%; height: auto;">
         </div>
 </ul>
-<h3 id="#Current_State"><u>Current State of the Program:</u></h3>
+<h3 id="Current_State"><u>Current State of the Program:</u></h3>
 <ul>
     <li><strong>Description:</strong> TBD</li>
     <li><strong>System Ability:</strong> TBD</li>
     <li><strong>Available Features:</strong> TBD</li>
 </ul>
-<h3 id="#General_Recommendations"><u>General Recommendations:</u></h3>
+<h3 id="General_Recommendations"><u>General Recommendations:</u></h3>
 <p>To be filled out upon project completion.</p>
 <h3 id="Resources"><u>Additional Resources:</u></h3>
 <p>Still confused? Here are some resources for learning more about these concepts:</p>
