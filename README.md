@@ -55,7 +55,6 @@
 </ul>
     
 <h3 id="#Organizational_Structure"><u>Organizational Structure:</u></h3>
-<h2><u>Organizational Structure</u></h2>
     <p>The naming structure of my file system consists of three sections:</p>
     <h4>1. Prefix</h4>
     <ul>
