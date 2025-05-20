@@ -89,15 +89,15 @@
 </ul>
 <h5>3. General</h5>
 <p>The remaining portion of the filename describes the file itself, allowing multiple versions of similar files to exist.</p>
-<h4><u>Current State of the Program:</u></h4>
-<ul>
-    <li><strong>Description:</strong> TBD</li>
         <li><strong>Example:</strong> A common file type you should familiarize yourself with are the feature extraction files. These serve as examples and existing implementations of current feature extraction methods that can either be built upon or used directly. The example we will be using below is the basic Respiration feature extraction method; since this method is complete, it is in stage [M].</li>
     <div style="display: flex; justify-content: center;">
         <img src="https://github.com/Ben2260/RealTimePhysio/blob/main/Project%201%3A%20Real%20Time/Generic%20name%20file%20Example.png" 
              alt="Prefix Name File Example" 
              style="width: 50%; height: auto;">
     </div>
+<h4><u>Current State of the Program:</u></h4>
+<ul>
+    <li><strong>Description:</strong> TBD</li>
     <li><strong>System Ability:</strong> TBD</li>
     <li><strong>Available Features:</strong> TBD</li>
 </ul>
