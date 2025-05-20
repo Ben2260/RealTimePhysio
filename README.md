@@ -41,7 +41,7 @@
     </li>
 </ul>
 <h2>Overview</h2>
-<h4><u>Code Terminology:</u></h4>
+<h3><u>Code Terminology:</u></h3>
 <ul>
     <li><strong>CPU:</strong> The brain of your computer, responsible for evaluating programs and processes.</li>
     <li><strong>Multi-Processing:</strong> A method that enables multiple mathematical operations to be performed simultaneously.</li>
@@ -52,15 +52,15 @@
     <li><strong>Sliding Window:</strong> A technique for processing smaller segments of a dataset sequentially.</li>
     <li><strong>Stride:</strong> The step size at which a sliding window moves across a dataset.</li>
 </ul>
-<h4>Resources</h4>
+<h3>Resources</h3>
 <p>Still confused? Here are some resources for learning more about these concepts:</p>
 <ul>
     <li><a href="https://www.geeksforgeeks.org/">GeeksforGeeks</a></li>
     <li><a href="https://www.ibm.com/docs/en">IBM Documentation</a></li>
 </ul>
-<h4><u>Organizational Structure</u></h4>
+<h3><u>Organizational Structure</u></h3>
 <p>The naming structure of my file system consists of three sections:</p>
-<h5>1. Stage</h5>
+<h4>1. Prefix</h4>
 <ul>
     <li><strong>[M]:</strong> <u>Main File</u> – tested, debugged, and ready for use.</li>
     <li><strong>[T]:</strong> <u>Test File</u> – undergoing debugging and lacks comments.</li>
@@ -74,7 +74,7 @@
              style="width: 50%; height: auto;">
     </div>
 </ul>
-<h5>2. Core Purpose</h5>
+<h4>2. Core Purpose</h4>
 <ul>
     <li><strong>[3rd]:</strong> <u>Third-Party</u> file – external or purchased library.</li>
     <li><strong>[Feat]:</strong> <u>Feature</u> file – functional and available for user use.</li>
@@ -89,7 +89,7 @@
              style="width: 50%; height: auto;">
     </div>
 </ul>
-<h5>3. General</h5>
+<h4>3. General</h4>
 <p>The remaining portion of the filename describes the file itself, allowing multiple versions of similar files to exist.</p>
         <br>
         <li><strong>Example:</strong> Basic Respiration feature extraction method; Since this method is representative of a basic respiration feature exstraction methodology it is described as seen bellow.</li>
