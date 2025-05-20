@@ -62,12 +62,12 @@
 <p>The naming structure of my file system consists of three sections:</p>
 <h5>1. Stage</h5>
 <ul>
-    <li><strong>[M]:</strong> <u>Main</u> file – tested, debugged, and ready for use.</li>
-    <li><strong>[T]:</strong> <u>Test</u> file – undergoing debugging and lacks comments.</li>
-    <li><strong>[uE]:</strong> <u>User Example</u> file – aids users in creating new functions.</li>
-    <li><strong>[V]:</strong> <u>Variable</u> file – contains old code used for reference.</li>
-    <li>Example: </li>
-    <pre>conda activate RealTime</pre>
+    <li><strong>[M]:</strong> <u>Main File</u> – tested, debugged, and ready for use.</li>
+    <li><strong>[T]:</strong> <u>Test File</u> – undergoing debugging and lacks comments.</li>
+    <li><strong>[uE]:</strong> <u>User Example File</u> – aids users in creating new functions.</li>
+    <li><strong>[V]:</strong> <u>Variable File</u> – contains old code used for reference.</li>
+    <li><strong>Example:</strong> A common file type you should familiarize yourself with are the feature exstraction files. These serve as examples and existing impplimentations of current feature exstraction methods that can ether be built uppon or used directly. The example we will be using bellow is the basic Respiration feature exstraction method; since this method is complete it is in stage [M]</li>
+    <pre>[M][Feat]Base_RSP_feature</pre>
 </ul>
 <h5>2. Core Purpose</h5>
 <ul>
