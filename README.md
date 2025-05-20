@@ -16,7 +16,7 @@
     <li><strong>2. Setting Up Real-Time</strong>
         <ul>
             <li><a href="#Easy: Anaconda Environment">Easy: Anaconda Environment</a></li>
-            <li><a href="#Third_Party_Links">Important links to 3rd party software</a></li>
+            <li><a href="#Third_Party_Links">Manual: Downloading Required Packages</a></li>
         </ul>
     </li>
     <li><strong>3. Available Functionality</strong>
@@ -96,11 +96,12 @@
 </ul>
 <h3 id="Current_State"><u>Current State of the Program:</u></h3>
 <ul>
-    <li><strong>Description:</strong> The systems current state is strong, with a solid foundation for future development. Designed to support multiple incoming data streams, which can be processed and analyzed using selected feature extraction files. While this is a complex process, the system remains accessible for users, provided they follow the guidelines outlined in this documentation. As of 05/05/2025, only one feature extraction method has been fully tested and approved. That being a basic respiration analysis (RSP) using Neurokit 2's feature exstraction methodology. Development on electrodermal activity (EDA was initiated but remains incomplete. However, finalizing this feature should be relatively straightforward based on the existing framework. Additionally, Neurokit serves as a middle layer or reference model, demonstrating how other feature extraction methods can be implemented and integrated into the system. But as previosly mentioned this can be adjusted or replaced as needed by the user.
- </li>
     <li><strong>Description:</strong> This program is designed to provide researchers with a methodology for real-time collection and analysis of physiological features from one or more participants. By utilizing multiprocessing, the system efficiently extracts, distributes, examines, and displays predefined physiological features from incoming data streams. This allows researchers to process multiple sources of biometric data simultaneously without significant delays or bottlenecks. A key component of this system is its use of TCP (Transmission Control Protocol) and buffer memory spaces to manage the movement of data between processes and objects. These mechanisms ensure smooth data transmission and prevent loss of critical information, even when handling multiple concurrent streams. While the system is structurally sound and provides a strong foundation for future development, its functionality remains limited due to the number of tested and approved feature extraction methods. As of May 5, 2025, only the Respiration (RSP) feature extraction using Neurokit 2 has undergone full validation and testing. Work has begun on Electrodermal Activity (EDA), but it remains unfinished. However, because of the modular nature of this framework, completing EDA—and integrating additional features—is relatively straightforward. Included in this documentation is a detailed guide on how users can develop and implement their own feature extraction methods, making it possible to tailor the system to specific research needs and expand its overall capabilities.</li>
-  <li><strong>Description:</strong>  For Data Collection The system supports multiple incoming physiological data streams from various sources. Using multiprocessing, the system distributes the raw data to predefined feature extraction modules, which analyze specific physiological signals supported by the use of TCP for real-time data transfer, ensuring seamless communication between different computational processes. Buffers store transient data to prevent loss and improve efficiency. Extracted features are examined and displayed according to researcher-defined parameters, allowing immediate insights into physiological responses.<li>
+<br>
+    <li><strong>System Ability:</strong>  For Data Collection The system supports multiple incoming physiological data streams from various sources. Using multiprocessing, the system distributes the raw data to predefined feature extraction modules, which analyze specific physiological signals supported by the use of TCP for real-time data transfer, ensuring seamless communication between different computational processes. Buffers store transient data to prevent loss and improve efficiency. Extracted features are examined and displayed according to researcher-defined parameters, allowing immediate insights into physiological responses.<li>
+<br>
     <li><strong>Looking Ahead:</strong> While the framework is operational, expanding the system's capabilities by developing additional feature extraction methods is essential for broader applications. Neurokit currently serves as both an analytical tool and a reference point for designing new functionalities, demonstrating how other feature extraction techniques can be structured within this ecosystem. By following the documentation, users can harness the full potential of this program, whether by utilizing its existing methods or by contributing new physiological feature analyses that enhance its scope and accuracy.</li>
+<br>
 </ul>
 <h3 id="General_Recommendations"><u>General Recommendations:</u></h3>
 <p>To be filled out upon project completion.</p>
@@ -111,7 +112,7 @@
     <li><a href="https://www.ibm.com/docs/en">IBM Documentation</a></li>
 </ul>
 <h2>Setting Up Real-Time</h2>
-    <h3>Easy: Anaconda Environment</h3>
+    <h3 id ="Easy: Anaconda Environment">Easy: Anaconda Environment</h3>
     <p><strong>Downloading and Setting Up Anaconda:</strong></p>
     <ol>
         <li>Visit <a href="https://www.anaconda.com/">Anaconda Website</a> and download the latest version.</li>
@@ -132,7 +133,7 @@
             <pre>conda list</pre>
         </li>
     </ol>
-    <h3>Manually: Downloading Required Packages</h3>
+    <h3 id="Third_Party_Links">Manual: Downloading Required Packages</h3>
     <p><strong>Installing Libraries:</strong></p>
     <ul>
         <li><a href="https://numpy.org/">NumPy</a></li>
