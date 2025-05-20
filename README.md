@@ -14,7 +14,7 @@
     </li>
     <li><strong>2. Setting Up Real-Time</strong>
         <ul>
-            <li><a href="#Installing_Packages">Installing Multiprocessing, Pandas, NumPy, Time, Socket, Neurokit 2, Python 3.12</a></li>
+            <li><a href="#Easy: Anaconda Environment">Easy: Anaconda Environment</a></li>
             <li><a href="#Third_Party_Links">Important links to 3rd party software</a></li>
         </ul>
     </li>
@@ -59,8 +59,6 @@
     <li><a href="https://www.ibm.com/docs/en">IBM Documentation</a></li>
 </ul>
 <h2>Setting Up Real-Time</h2>
-<h4>Automatically: Anaconda Environment</h4>
-<h2 id="Overview">Download & Set Up</h2>
     <h3>Easy: Anaconda Environment</h3>
     <p><strong>Downloading and Setting Up Anaconda:</strong></p>
     <ol>
