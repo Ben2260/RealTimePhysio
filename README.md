@@ -37,7 +37,15 @@
 >> - **Stride:** The step size or interval at which the sliding window moves across the dataset. A smaller stride leads to more overlap between windows, providing higher resolution but increased computational load, while a larger stride results in less overlap and reduced computational load.
 >> Still confused? Here are some resources for learning more about these concepts:
 >>
->> [![Click Me](https://media.geeksforgeeks.org/gfg-gg-logo.svg)](https://www.geeksforgeeks.org/)  [![Click Me](https://media.geeksforgeeks.org/gfg-gg-logo.svg)](https://www.ibm.com/docs/en)
+>> [![Click Me](https://media.geeksforgeeks.org/gfg-gg-logo.svg)](https://www.geeksforgeeks.org/)  
+<table>
+  <tr>
+    <td><img src="https://vectorseek.com/wp-content/uploads/2021/02/IBM-Logo-Vector.jpg" width="100"></td>
+    <td>IBM Logo</td>
+  </tr>
+</table>
+
+
 > ##### <u>*Organizational Structure*</u>
 >> The naming structure of my file system is made up of 3 sections and well be using the example above as we go through it:
 >> 1. <u>*Stage*</u>: The first set of square brakets represents the stage of the script.
