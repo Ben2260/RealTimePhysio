@@ -10,6 +10,7 @@
             <li><a href="#Organizational_Structure">Organizational Structure</a></li>
             <li><a href="#Current_State">Current state of the program</a></li>
             <li><a href="#General_Recommendations">General recommendations</a></li>
+            <li><a href="#Resources">Additional Resources</a></li>
         </ul>
     </li>
     <li><strong>2. Setting Up Real-Time</strong>
@@ -52,7 +53,57 @@
     <li><strong>Sliding Window:</strong> A technique for processing smaller segments of a dataset sequentially.</li>
     <li><strong>Stride:</strong> The step size at which a sliding window moves across a dataset.</li>
 </ul>
-<h3>Resources</h3>
+    
+<h3 id="#Organizational_Structure"><u>Organizational Structure:</u></h3>
+<h2><u>Organizational Structure</u></h2>
+    <p>The naming structure of my file system consists of three sections:</p>
+    <h4>1. Prefix</h4>
+    <ul>
+        <li><strong>[M]:</strong> <u>Main File</u> – tested, debugged, and ready for use.</li>
+        <li><strong>[T]:</strong> <u>Test File</u> – undergoing debugging and lacks comments.</li>
+        <li><strong>[uE]:</strong> <u>User Example File</u> – aids users in creating new functions.</li>
+        <li><strong>[V]:</strong> <u>Variable File</u> – contains old code used for reference.</li>
+        <br>
+        <li><strong>Example:</strong> A common file type you should familiarize yourself with are the feature extraction files. These serve as examples and existing implementations of current feature extraction methods that can either be built upon or used directly. The example we will be using below is the basic Respiration feature extraction method; since this method is complete, it is in stage [M] and is displayed bellow.</li>
+        <div style="display: flex; justify-content: center;">
+            <img src="https://github.com/Ben2260/RealTimePhysio/raw/main/Project%201%3A%20Real%20Time/Prefix%20name%20file%20Example.png" 
+                 alt="Prefix Name File Example" 
+                 style="width: 50%; height: auto;">
+        </div>
+    </ul>
+    <h4>2. Core Purpose</h4>
+    <ul>
+        <li><strong>[3rd]:</strong> <u>Third-Party</u> file – external or purchased library.</li>
+        <li><strong>[Feat]:</strong> <u>Feature</u> file – functional and available for user use.</li>
+        <li><strong>[main]:</strong> <u>Leader</u> file – core file; meant to be executed directly.</li>
+        <li><strong>[Com]:</strong> <u>Communication</u> file – handles data collection and routing.</li>
+        <li><strong>[zOld]:</strong> <u>Original</u> file – deprecated but may be useful for development.</li>
+        <br>
+        <li><strong>Example:</strong> Basic Respiration feature extraction method; since this file is a feature exstraction method, it has core purpose [Feat] and is displayed bellow.</li>
+        <div style="display: flex; justify-content: center;">
+            <img src="https://github.com/Ben2260/RealTimePhysio/blob/main/Project%201%3A%20Real%20Time/Core%20name%20file%20Example.png" 
+                 alt="Prefix Name File Example" 
+                 style="width: 50%; height: auto;">
+        </div>
+    <h4>3. General</h4>
+    <p>The remaining portion of the filename describes the file itself, allowing multiple versions of similar files to exist.</p>
+            <br>
+            <li><strong>Example:</strong> Basic Respiration feature extraction method; Since this method is representative of a basic respiration feature exstraction methodology it is described as seen bellow.</li>
+        <div style="display: flex; justify-content: center;">
+            <img src="https://github.com/Ben2260/RealTimePhysio/blob/main/Project%201%3A%20Real%20Time/Generic%20name%20file%20Example.png" 
+                 alt="Prefix Name File Example" 
+                 style="width: 50%; height: auto;">
+        </div>
+</ul>
+<h3 id="#Current_State"><u>Current State of the Program:</u></h3>
+<ul>
+    <li><strong>Description:</strong> TBD</li>
+    <li><strong>System Ability:</strong> TBD</li>
+    <li><strong>Available Features:</strong> TBD</li>
+</ul>
+<h3 id="#General_Recommendations"><u>General Recommendations:</u></h3>
+<p>To be filled out upon project completion.</p>
+<h3 id="Resources"><u>Additional Resources:</u></h3>
 <p>Still confused? Here are some resources for learning more about these concepts:</p>
 <ul>
     <li><a href="https://www.geeksforgeeks.org/">GeeksforGeeks</a></li>
@@ -98,53 +149,6 @@
             <pre>pip show numpy pandas neurokit2 sockets multiprocessing</pre>
         </li>
     </ol>
-<h2><u>Organizational Structure</u></h2>
-<p>The naming structure of my file system consists of three sections:</p>
-<h4>1. Prefix</h4>
-<ul>
-    <li><strong>[M]:</strong> <u>Main File</u> – tested, debugged, and ready for use.</li>
-    <li><strong>[T]:</strong> <u>Test File</u> – undergoing debugging and lacks comments.</li>
-    <li><strong>[uE]:</strong> <u>User Example File</u> – aids users in creating new functions.</li>
-    <li><strong>[V]:</strong> <u>Variable File</u> – contains old code used for reference.</li>
-    <br>
-    <li><strong>Example:</strong> A common file type you should familiarize yourself with are the feature extraction files. These serve as examples and existing implementations of current feature extraction methods that can either be built upon or used directly. The example we will be using below is the basic Respiration feature extraction method; since this method is complete, it is in stage [M] and is displayed bellow.</li>
-    <div style="display: flex; justify-content: center;">
-        <img src="https://github.com/Ben2260/RealTimePhysio/raw/main/Project%201%3A%20Real%20Time/Prefix%20name%20file%20Example.png" 
-             alt="Prefix Name File Example" 
-             style="width: 50%; height: auto;">
-    </div>
-</ul>
-<h4>2. Core Purpose</h4>
-<ul>
-    <li><strong>[3rd]:</strong> <u>Third-Party</u> file – external or purchased library.</li>
-    <li><strong>[Feat]:</strong> <u>Feature</u> file – functional and available for user use.</li>
-    <li><strong>[main]:</strong> <u>Leader</u> file – core file; meant to be executed directly.</li>
-    <li><strong>[Com]:</strong> <u>Communication</u> file – handles data collection and routing.</li>
-    <li><strong>[zOld]:</strong> <u>Original</u> file – deprecated but may be useful for development.</li>
-    <br>
-    <li><strong>Example:</strong> Basic Respiration feature extraction method; since this file is a feature exstraction method, it has core purpose [Feat] and is displayed bellow.</li>
-    <div style="display: flex; justify-content: center;">
-        <img src="https://github.com/Ben2260/RealTimePhysio/blob/main/Project%201%3A%20Real%20Time/Core%20name%20file%20Example.png" 
-             alt="Prefix Name File Example" 
-             style="width: 50%; height: auto;">
-    </div>
-</ul>
-<h4>3. General</h4>
-<p>The remaining portion of the filename describes the file itself, allowing multiple versions of similar files to exist.</p>
-        <br>
-        <li><strong>Example:</strong> Basic Respiration feature extraction method; Since this method is representative of a basic respiration feature exstraction methodology it is described as seen bellow.</li>
-    <div style="display: flex; justify-content: center;">
-        <img src="https://github.com/Ben2260/RealTimePhysio/blob/main/Project%201%3A%20Real%20Time/Generic%20name%20file%20Example.png" 
-             alt="Prefix Name File Example" 
-             style="width: 50%; height: auto;">
-    </div>
-<h4><u>Current State of the Program:</u></h4>
-<ul>
-    <li><strong>Description:</strong> TBD</li>
-    <li><strong>System Ability:</strong> TBD</li>
-    <li><strong>Available Features:</strong> TBD</li>
-</ul>
-<h4><u>General Recommendations:</u></h4>
-<p>To be filled out upon project completion.</p>
+
 </body>
 </html>
