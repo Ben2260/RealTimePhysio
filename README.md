@@ -84,7 +84,9 @@
                  alt="Prefix Name File Example" 
                  style="width: 50%; height: auto;">
         </div>
+        </ul>
     <h4>3. General</h4>
+    <ul>
     <p>The remaining portion of the filename describes the file itself, allowing multiple versions of similar files to exist.</p>
             <br>
             <li><strong>Example:</strong> Basic Respiration feature extraction method; Since this method is representative of a basic respiration feature exstraction methodology it is described as seen bellow.</li>
