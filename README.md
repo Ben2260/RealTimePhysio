@@ -53,16 +53,14 @@
     <li><strong>Sliding Window:</strong> A technique for processing smaller segments of a dataset sequentially.</li>
     <li><strong>Stride:</strong> The step size at which a sliding window moves across a dataset.</li>
 </ul>
-
+<h4>Resources</h4>
 <p>Still confused? Here are some resources for learning more about these concepts:</p>
 <ul>
-    <li><a href="https://www.geeksforgeeks.org/"><img src="https://media.geeksforgeeks.org/gfg-gg-logo.svg" alt="GeeksforGeeks"></a></li>
-    <li><a href="https://www.ibm.com/docs/en"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Documentation"></a></li>
+    <li><a href="https://www.geeksforgeeks.org/">GeeksforGeeks</a></li>
+    <li><a href="https://www.ibm.com/docs/en">IBM Documentation</a></li>
 </ul>
-
 <h4><u>Organizational Structure</u></h4>
 <p>The naming structure of my file system consists of three sections:</p>
-
 <h5>1. Stage</h5>
 <ul>
     <li><strong>[M]:</strong> <u>Main</u> file – tested, debugged, and ready for use.</li>
@@ -79,22 +77,17 @@
     <li><strong>[Com]:</strong> <u>Communication</u> file – handles data collection and routing.</li>
     <li><strong>[zOld]:</strong> <u>Original</u> file – deprecated but may be useful for development.</li>
 </ul>
-
 <h5>3. General</h5>
 <p>The remaining portion of the filename describes the file itself, allowing multiple versions of similar files to exist.</p>
-
 <h4><u>Current State of the Program:</u></h4>
 <ul>
     <li><strong>Description:</strong> TBD</li>
     <li><strong>System Ability:</strong> TBD</li>
     <li><strong>Available Features:</strong> TBD</li>
 </ul>
-
 <h4><u>General Recommendations:</u></h4>
 <p>To be filled out upon project completion.</p>
-
 <h3>Setting Up Real-Time</h3>
-
 <h4>Automatically: Anaconda Environment</h4>
 <h2 id="Overview">Download & Set Up</h2>
     <h3>Easy: Anaconda Environment</h3>
