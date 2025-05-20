@@ -15,7 +15,7 @@
     </li>
     <li><strong>2. Setting Up Real-Time</strong>
         <ul>
-            <li><a href="#Easy: Anaconda Environment">Easy: Anaconda Environment</a></li>
+            <li><a href="#Easy_Anaconda_Environment">Easy: Anaconda Environment</a></li>
             <li><a href="#Third_Party_Links">Manual: Downloading Required Packages</a></li>
         </ul>
     </li>
@@ -112,7 +112,7 @@
     <li><a href="https://www.ibm.com/docs/en">IBM Documentation</a></li>
 </ul>
 <h2>Setting Up Real-Time</h2>
-    <h3 id ="Easy: Anaconda Environment">Easy: Anaconda Environment</h3>
+    <h3 id ="Easy_Anaconda_Environment">Easy: Anaconda Environment</h3>
     <p><strong>Downloading and Setting Up Anaconda:</strong></p>
     <ol>
         <li>Visit <a href="https://www.anaconda.com/">Anaconda Website</a> and download the latest version.</li>
