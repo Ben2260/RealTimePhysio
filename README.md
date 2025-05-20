@@ -5,100 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real-Time Feature Analysis</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; }
-        h1, h2, h3 { color: #0056b3; }
-        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
-        th, td { border: 3px solid black; padding: 10px; text-align: left; }
-        th { background-color: #f4f4f4; }
-        ul { list-style-type: square; padding-left: 20px; }
-        a { color: #0056b3; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .section { margin-bottom: 40px; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2, h3, h4, h5 { color: #333; }
+        ul { list-style-type: none; padding-left: 20px; }
+        li { margin-bottom: 5px; }
+        blockquote { background: #f9f9f9; border-left: 10px solid #ccc; padding: 10px; margin: 10px 0; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; }
+        a { color: #007BFF; text-decoration: none; }
+        u { text-decoration: underline; }
     </style>
 </head>
 <body>
 
-<h1>Real-Time Feature Analysis</h1>
+    <h1>Real-Time Feature Analysis</h1>
+    
+    <h2>Table of Contents:</h2>
+    <blockquote>
+        <strong>1. Overview</strong>
+        <ul>
+            <li>Terminology</li>
+            <li>Organizational Structure</li>
+            <li>Current state of the program</li>
+            <li>General recommendations</li>
+        </ul>
+        
+        <strong>2. Downloading Required Packages</strong>
+        <ul>
+            <li>Installing Multiprocessing, Pandas, NumPy, Time, Socket, Neurokit 2, Python 3.12</li>
+            <li>Important links to 3rd party software</li>
+        </ul>
 
-<h2>Table of Contents</h2>
-<table>
-    <tr><th>Link</th><th>Section</th></tr>
-    <tr><td><a href="#overview">Overview</a></td><td>Terminology, Structure, Current State</td></tr>
-    <tr><td><a href="#download">Downloading Packages</a></td><td>Installing dependencies</td></tr>
-    <tr><td><a href="#functionality">Available Functionality</a></td><td>EDA, RSP</td></tr>
-    <tr><td><a href="#examples">Examples</a></td><td>Main, Emulator, TCP, Multiprocessing</td></tr>
-    <tr><td><a href="#future">Future Development</a></td><td>Design, GTL Lock, New Features</td></tr>
-</table>
+        <strong>3. Available Functionality</strong>
+        <ul>
+            <li><a href="#EDA">EDA</a></li>
+            <li>RSP</li>
+        </ul>
 
-<div class="section" id="overview">
+        <strong>4. Examples</strong>
+        <ul>
+            <li>Running the Main</li>
+            <li>Using Device Emulator</li>
+            <li>Understanding TCP</li>
+            <li>Understanding Multiprocessing</li>
+        </ul>
+
+        <strong>5. Future Development</strong>
+        <ul>
+            <li>Design & Theory</li>
+            <li>GTL Lock & Limitations</li>
+            <li>Making New Functions</li>
+        </ul>
+    </blockquote>
+    
     <h2>Overview</h2>
-    <h3>Code Terminology</h3>
+    <h4><u>Code Terminology:</u></h4>
     <ul>
-        <li><b>CPU:</b> The Central Processing Unit, responsible for executing all processes efficiently.</li>
-        <li><b>Multi-Processing:</b> Running multiple computations simultaneously for speed improvement.</li>
-        <li><b>Memory Management:</b> Optimizing RAM usage to improve program performance.</li>
-        <li><b>Sliding Window:</b> A method for analyzing sequential data chunks.</li>
+        <li><strong>CPU:</strong> The brain of your computer, responsible for evaluating programs.</li>
+        <li><strong>Multi-Processing:</strong> Running multiple calculations in parallel.</li>
+        <li><strong>Multi-Threading:</strong> TBD</li>
+        <li><strong>CPU Up Time:</strong> Measures active computing time, should be optimized.</li>
+        <li><strong>Memory Management:</strong> Allocating and optimizing memory resources.</li>
+        <li><strong>Sliding Window:</strong> Processing smaller data segments sequentially.</li>
+        <li><strong>Stride:</strong> Step size for sliding window movement.</li>
     </ul>
+    <blockquote>
+        <strong>Resources:</strong>
+        <a href="https://www.geeksforgeeks.org/">GeeksforGeeks</a> |
+        <a href="https://www.ibm.com/docs/en">IBM Documentation</a>
+    </blockquote>
 
-    <h3>External Resources</h3>
-    <table>
-        <tr><th>Link</th><th>Description</th></tr>
-        <tr>
-            <td><a href="https://www.geeksforgeeks.org">
-                <img src="https://media.geeksforgeeks.org/gfg-gg-logo.svg" width="100">
-            </a></td>
-            <td>GeeksForGeeks</td>
-        </tr>
-        <tr>
-            <td><a href="https://www.ibm.com/docs/en">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" width="100">
-            </a></td>
-            <td>IBM Documentation</td>
-        </tr>
-    </table>
-</div>
+    <h2>Setting Up Real Time</h2>
+    <h3>Automatically: Anaconda Environment</h3>
+    <blockquote>
+        <strong>Downloading and Setting Up Anaconda:</strong>
+        <ol>
+            <li>Visit <a href="https://www.anaconda.com/">Anaconda Website</a> and download the latest version.</li>
+            <li>Run the installer and follow setup instructions.</li>
+            <li>Verify installation:
+                <pre>conda --version</pre>
+            </li>
+            <li>Create a new environment:
+                <pre>conda create --name RealTime python=3.9</pre>
+            </li>
+            <li>Activate the environment:
+                <pre>conda activate RealTime</pre>
+            </li>
+            <li>Install required libraries:
+                <pre>conda install numpy pandas neurokit2 sockets multiprocessing</pre>
+            </li>
+            <li>Verify installation:
+                <pre>conda list</pre>
+            </li>
+        </ol>
+    </blockquote>
 
-<div class="section" id="download">
-    <h2>Downloading Required Packages</h2>
-    <h3>Installing Dependencies</h3>
-    <ul>
-        <li><a href="https://numpy.org/">Numpy</a></li>
-        <li><a href="https://pandas.pydata.org/">Pandas</a></li>
-        <li><a href="https://neuropsychology.github.io/NeuroKit/">Neurokit 2</a></li>
-        <li><a href="https://docs.python.org/3/library/socket.html">Sockets</a></li>
-        <li><a href="https://docs.python.org/3/library/multiprocessing.html">Multiprocessing</a></li>
-    </ul>
-    <pre><code>pip install numpy pandas neurokit2 sockets multiprocessing</code></pre>
-</div>
-
-<div class="section" id="functionality">
-    <h2>Available Functionality</h2>
-    <table>
-        <tr><th>Feature</th><th>Status</th></tr>
-        <tr><td>EDA</td><td>To be determined</td></tr>
-        <tr><td>RSP</td><td>To be determined</td></tr>
-    </table>
-</div>
-
-<div class="section" id="examples">
-    <h2>Examples</h2>
-    <ul>
-        <li><b>Running the Main</b>: TBD</li>
-        <li><b>Using Device Emulator</b>: TBD</li>
-        <li><b>Understanding TCP</b>: TBD</li>
-        <li><b>Understanding Multi-Processing</b>: TBD</li>
-    </ul>
-</div>
-
-<div class="section" id="future">
-    <h2>Future Development</h2>
-    <table>
-        <tr><th>Feature</th><th>Status</th></tr>
-        <tr><td>Design & Theory</td><td>To be determined</td></tr>
-        <tr><td>GTL Lock & Limitations</td><td>To be determined</td></tr>
-        <tr><td>Making New Functions</td><td>To be determined</td></tr>
-    </table>
-</div>
+    <h3>Manually: Downloading Required Packages</h3>
+    <blockquote>
+        <strong>Installing Libraries:</strong>
+        <ul>
+            <li><a href="https://numpy.org/">NumPy</a></li>
+            <li><a href="https://pandas.pydata.org/">Pandas</a></li>
+            <li><a href="https://neuropsychology.github.io/NeuroKit/">Neurokit 2</a></li>
+            <li><a href="https://docs.python.org/3/library/socket.html">Sockets</a></li>
+            <li><a href="https://docs.python.org/3/library/multiprocessing.html">Multiprocessing</a></li>
+        </ul>
+        <ol>
+            <li>Open your Terminal.</li>
+            <li>Run:
+                <pre>pip install numpy pandas neurokit2 sockets multiprocessing</pre>
+            </li>
+            <li>Verify installation:
+                <pre>pip show numpy pandas neurokit2 sockets multiprocessing</pre>
+            </li>
+        </ol>
+    </blockquote>
 
 </body>
 </html>
