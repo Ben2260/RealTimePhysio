@@ -40,8 +40,8 @@
         </ul>
     </li>
 </ul>
-<h2 id="Overview">Overview</h2>
-    <h3>Automatically: Anaconda Environment</h3>
+<h2 id="Overview">Download & Set Up</h2>
+    <h3>Easy: Anaconda Environment</h3>
     <p><strong>Downloading and Setting Up Anaconda:</strong></p>
     <ol>
         <li>Visit <a href="https://www.anaconda.com/">Anaconda Website</a> and download the latest version.</li>
