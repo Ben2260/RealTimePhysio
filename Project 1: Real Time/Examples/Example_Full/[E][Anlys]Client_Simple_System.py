@@ -16,17 +16,17 @@ def write_average_to_csv(avg, file_name, csv_lock):
             writer.writerow(avg)
         print(f"[ProcAverage] Average written to {file_name}")
 
-def ReceiveProcess(host, port, stop_event, RawLock, DistributorLock, chunk_size, shm_shape, shm_name):
+def ReceiveProcess(host, port, stop_event, RawLock, DistributorLock, update_chunk, shm_shape, shm_name):
     """
-    Connects to a TCP server, receives comma-separated float data, collects a full chunk,
-    and writes it to shared memory using consistent lock ordering.
+    Connects to a TCP server, receives comma‐separated float data, collects a new update chunk,
+    and then updates shared memory by removing the oldest rows and appending the new ones.
     """
     shm_arry = shared_memory.SharedMemory(name=shm_name)
     shm_np = np.ndarray(shm_shape, dtype=np.float64, buffer=shm_arry.buf)
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client_socket.connect((host, port))
     
-    temp_arry = []
+    temp_arry = []  # temporary storage until update_chunk rows are collected
     print("Process 1: Receiving Data")
 
     try:
@@ -37,18 +37,25 @@ def ReceiveProcess(host, port, stop_event, RawLock, DistributorLock, chunk_size,
                 break
             rows = data.decode('utf-8').strip().split('\n')
             for row in rows:
-                values = list(map(float, row.split(',')))
+                try:
+                    values = list(map(float, row.split(',')))
+                except ValueError as ve:
+                    print(f"Skipping row due to conversion error: {row}")
+                    continue
                 temp_arry.append(values)
-                if len(temp_arry) == chunk_size:
+                if len(temp_arry) == update_chunk:
                     # Always acquire locks in the same order: DistributorLock then RawLock.
                     DistributorLock.acquire()
                     print("P1 took DistributorLock")
                     RawLock.acquire()
                     print("P1 took RawLock")
                     
-                    # Write the new data chunk into shared memory.
-                    shm_np[:chunk_size] = temp_arry[:chunk_size]
-                    print("P1: Shared Memory Updated")
+                    # Shift the rolling window:
+                    # Discard the oldest update_chunk rows
+                    shm_np[:-update_chunk] = shm_np[update_chunk:]
+                    # Append new data at the end of the buffer
+                    shm_np[-update_chunk:] = np.array(temp_arry)
+                    print("P1: Shared Memory Updated (rolled window)")
                     
                     # Release locks in reverse order.
                     RawLock.release()
@@ -64,18 +71,19 @@ def ReceiveProcess(host, port, stop_event, RawLock, DistributorLock, chunk_size,
     finally:
         client_socket.close()
 
-def ProcSplit(stop_event, RawLock, DistributorLock, shm_shape, shm_name, chunk_size):
+def ProcSplit(stop_event, RawLock, DistributorLock, shm_shape, shm_name, buffer_length):
     """
-    Reads the loaded data chunk from shared memory and splits it into two arrays
+    Reads the entire rolling window from shared memory and splits it into two arrays
     while acquiring locks in a consistent order.
     """
     shm_arry = shared_memory.SharedMemory(name=shm_name)
     shm_np = np.ndarray(shm_shape, dtype=np.float64, buffer=shm_arry.buf)
     print("Process 2: Splitting Data")
 
+    # Allocate full buffers based on the rolling window size
     temp_arry = np.zeros(shm_shape, dtype=np.float64)
-    eda_data = np.zeros(chunk_size, dtype=np.float64)
-    rsp_data = np.zeros(chunk_size, dtype=np.float64)
+    eda_data = np.zeros(buffer_length, dtype=np.float64)
+    rsp_data = np.zeros(buffer_length, dtype=np.float64)
 
     try:
         while not stop_event.is_set():
@@ -90,7 +98,7 @@ def ProcSplit(stop_event, RawLock, DistributorLock, shm_shape, shm_name, chunk_s
             RawLock.acquire()
             print("P2 took RawLock")
             
-            # Copy the full data chunk.
+            # Copy the full data chunk (the rolling window).
             temp_arry[:] = shm_np[:]
             
             # Release the locks.
@@ -110,10 +118,10 @@ def ProcSplit(stop_event, RawLock, DistributorLock, shm_shape, shm_name, chunk_s
     finally:
         print("Process 2 finished.")
 
-def ProcAverage(stop_event, RawLock, DistributorLock, shm_shape, shm_name, chunk_size, csv_lock):
+def ProcAverage(stop_event, RawLock, DistributorLock, shm_shape, shm_name, buffer_length, csv_lock):
     """
-    Reads the shared memory data chunk, computes the column-wise average,
-    prints the result, and writes it to a CSV file named "Example product csv.csv".
+    Reads the entire rolling window from shared memory, computes the column-wise average,
+    prints the result, and writes it to a CSV file.
     """
     shm_arry = shared_memory.SharedMemory(name=shm_name)
     shm_np = np.ndarray(shm_shape, dtype=np.float64, buffer=shm_arry.buf)
@@ -127,17 +135,17 @@ def ProcAverage(stop_event, RawLock, DistributorLock, shm_shape, shm_name, chunk
             RawLock.acquire()
             print("P3 took RawLock")
             
-            # Make a local copy of the current data chunk.
-            local_chunk = np.copy(shm_np[:chunk_size])
+            # Make a local copy of the entire rolling window.
+            local_chunk = np.copy(shm_np[:])
             
             RawLock.release()
             print("P3 released RawLock")
             DistributorLock.release()
             print("P3 released DistributorLock")
             
-            # Compute the column-wise average.
+            # Compute the column-wise average over the full 10-second window.
             avg = np.mean(local_chunk, axis=0)
-            print("Process 3: Average of loaded chunk:", avg)
+            print("Process 3: Average of rolling window:", avg)
             
             # Write the average to a CSV file.
             write_average_to_csv(avg, "Example_product_csv.csv", csv_lock)
@@ -149,12 +157,14 @@ def ProcAverage(stop_event, RawLock, DistributorLock, shm_shape, shm_name, chunk
         print("Process 3 finished.")
 
 if __name__ == '__main__':
-
     host = 'localhost'
     port = 12345
 
-    ExamLimit = 1000  # Number of rows per data chunk.
-    shape = (ExamLimit, 2)
+    # Set up parameters for a 10-second rolling window at 2000 Hz.
+    buffer_length = 20000  # Total rows to store 10 seconds worth of data.
+    update_chunk = 2000    # New data chunk size (e.g., we update the window every 1 second).
+    shape = (buffer_length, 2)  # Two columns of data.
+
     dtype = np.float64
 
     # Locks for synchronizing shared memory and CSV access.
@@ -168,10 +178,12 @@ if __name__ == '__main__':
     shared_array = np.ndarray(shape, dtype=dtype, buffer=shm.buf)
 
     # Create processes.
+    # Process 1 (Receiver) updates using 'update_chunk' rows.
     p1 = mp.Process(target=ReceiveProcess, args=(host, port, stop_event, RawLock, DistributorLock,
-                                                   ExamLimit, shape, shm.name))
-    p2 = mp.Process(target=ProcSplit, args=(stop_event, RawLock, DistributorLock, shape, shm.name, ExamLimit))
-    p3 = mp.Process(target=ProcAverage, args=(stop_event, RawLock, DistributorLock, shape, shm.name, ExamLimit, csv_lock))
+                                                   update_chunk, shape, shm.name))
+    # Processes 2 & 3 operate on the full rolling window ('buffer_length' rows).
+    p2 = mp.Process(target=ProcSplit, args=(stop_event, RawLock, DistributorLock, shape, shm.name, buffer_length))
+    p3 = mp.Process(target=ProcAverage, args=(stop_event, RawLock, DistributorLock, shape, shm.name, buffer_length, csv_lock))
 
     try:
         # Start processes.
